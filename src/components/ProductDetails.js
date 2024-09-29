@@ -16,12 +16,12 @@ function ProductDetails() {
 
 
    useEffect(() => {
-      fetch(`http://localhost:9000/products/${productID}`)
-        .then((res) => res.json())
-        .then((data) => {
-          return setProduct(data);
-        });
-   }, []);
+     fetch(`http://localhost:9000/products/${productID}`)
+       .then((res) => res.json())
+       .then((data) => {
+         return setProduct(data);
+       });
+   }, [productID]);
 
 
 
